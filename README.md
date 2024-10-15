@@ -65,15 +65,6 @@
 
 </font>
 
-## Demo 
-<font face="Times New Roman" size=4>
-
-   ```
-   python script/experiment/demo.py
-   ```
-
-</font>
-
 ## Citation
 <font face="Times New Roman" size=4>
 Please cite this paper in your publications if it helps your research:
@@ -92,7 +83,7 @@ Please cite this paper in your publications if it helps your research:
 ## Thanks
 <font face="Times New Roman" size=4>
 
-Partial codes are based on the repository from [Houjing Huang](https://github.com/huanghoujing).
+Partial codes are based on the repository from [Dangwei Li](https://github.com/dangweili/pedestrian-attribute-recognition-pytorch).
 
 The code should only be used for academic research.
 
