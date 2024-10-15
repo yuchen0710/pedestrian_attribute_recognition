@@ -9,7 +9,7 @@
 
 2. Download and prepare the dataset as follow:
 
-    a. PETA [Baidu Yun](https://pan.baidu.com/s/1q8nsydT7xkDjZJOxvPcoEw), passwd: 5vep, or [Google Drive](https://drive.google.com/open?id=1q4cux17K3zNBgIrDV4FtcHJPLzXNKfYG).
+    a. PETA
     
     ```
     ./dataset/peta/images/*.png
@@ -20,7 +20,7 @@
     python script/dataset/transform_peta.py 
     ```
 
-    b. RAP [Google Drive](https://drive.google.com/open?id=1FkXlpbk3R-M_vkvM8ByeAZVAMzN6vUOr).
+    b. RAP
     ```
     ./dataset/rap/RAP_dataset/*.png
     ./dataset/rap/RAP_annotation/RAP_annotation.mat
@@ -29,7 +29,7 @@
     python script/dataset/transform_rap.py
     ```
 
-    c. PA100K [Links](https://drive.google.com/drive/folders/0B5_Ra3JsEOyOUlhKM0VPZ1ZWR2M)
+    c. PA100K
     ```
     ./dataset/pa100k/data/*.png
     ./dataset/pa100k/annotation.mat
@@ -38,7 +38,7 @@
     python script/dataset/transform_pa100k.py 
     ```
 
-    d. RAP(v2) [Links](https://drive.google.com/open?id=1hoPIB5NJKf3YGMvLFZnIYG5JDcZTxHph).
+    d. RAP(v2)
     ```
     ./dataset/rap2/RAP_dataset/*.png
     ./dataset/rap2/RAP_annotation/RAP_annotation.mat
