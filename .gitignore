@@ -106,3 +106,9 @@ LOCK
 LOG*
 CURRENT
 MANIFEST-*
+
+exp/deepmar_resnet50/*
+dataset
+rap2_extra.xlsx
+rapv2.xlsx
+record_attr.xlsx

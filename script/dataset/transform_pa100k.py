@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import random
-import cPickle as pickle
+import _pickle as pickle
 from scipy.io import loadmat
 
 np.random.seed(0)
@@ -19,13 +19,13 @@ def generate_data_description(save_dir):
     """
     dataset = dict()
     dataset['description'] = 'pa100k'
-    dataset['root'] = './dataset/pa100k/data/'
+    dataset['root'] = '../Dataset/pa100k/data/'
     dataset['image'] = []
     dataset['att'] = []
     dataset['att_name'] = []
     dataset['selected_attribute'] = range(26)
     # load ANNOTATION.MAT
-    data = loadmat(open('./dataset/pa100k/annotation.mat', 'r'))
+    data = loadmat(open('../Dataset/pa100k/annotation.mat', 'rb'))
     for idx in range(26):
         dataset['att_name'].append(data['attributes'][idx][0][0])
 
@@ -41,7 +41,7 @@ def generate_data_description(save_dir):
         dataset['image'].append(data['test_images_name'][idx][0][0])
         dataset['att'].append(data['test_label'][idx, :].tolist())
 
-    with open(os.path.join(save_dir, 'pa100k_dataset.pkl'), 'w+') as f:
+    with open(os.path.join(save_dir, 'pa100k_dataset.pkl'), 'wb+') as f:
         pickle.dump(dataset, f)
 
 def create_trainvaltest_split(traintest_split_file):
@@ -56,8 +56,8 @@ def create_trainvaltest_split(traintest_split_file):
     partition['weight_trainval'] = []
     partition['weight_train'] = []
     # load ANNOTATION.MAT
-    data = loadmat(open('./dataset/pa100k/annotation.mat', 'r'))
-    train = range(80000) 
+    data = loadmat(open('../Dataset/pa100k/annotation.mat', 'rb'))
+    train = list(range(80000))
     val = [i+80000 for i in range(10000)]
     test = [i+90000 for i in range(10000)]
     trainval = train + val
@@ -74,7 +74,7 @@ def create_trainvaltest_split(traintest_split_file):
     partition['weight_trainval'].append(weight_trainval)
     partition['weight_train'].append(weight_train)
 
-    with open(traintest_split_file, 'w+') as f:
+    with open(traintest_split_file, 'wb+') as f:
         pickle.dump(partition, f)
 
 if __name__ == "__main__":
@@ -83,11 +83,11 @@ if __name__ == "__main__":
     parser.add_argument(
         '--save_dir',
         type=str,
-        default='./dataset/pa100k/')
+        default='../Dataset/pa100k/')
     parser.add_argument(
         '--traintest_split_file',
         type=str,
-        default="./dataset/pa100k/pa100k_partition.pkl")
+        default="../Dataset/pa100k/pa100k_partition.pkl")
     args = parser.parse_args()
     save_dir = args.save_dir
     traintest_split_file = args.traintest_split_file

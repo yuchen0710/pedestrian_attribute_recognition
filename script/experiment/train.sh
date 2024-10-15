@@ -12,9 +12,9 @@ python ./script/experiment/train_deepmar_resnet50.py \
     --new_params_lr=0.001 \
     --finetuned_params_lr=0.001 \
     --staircase_decay_at_epochs="(50,100)" \
-    --total_epochs=150 \
+    --total_epochs=300 \
     --epochs_per_val=10\
-    --epochs_per_save=50 \
+    --epochs_per_save=10 \
     --drop_pool5=True \
     --drop_pool5_rate=0.5 \
     --run=1 \

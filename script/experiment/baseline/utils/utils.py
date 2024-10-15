@@ -1,5 +1,5 @@
 import os
-import cPickle as pickle
+import _pickle as pickle
 import datetime
 import time
 # from contextlib import contextmanger
@@ -229,7 +229,8 @@ def load_state_dict(model, src_state_dict):
             param = param.data
         try:
             dest_state_dict[name].copy_(param)
-        except Exception, msg:
+        except Exception as msg:
+        # except Exception, msg:
             print("Warning: Error occurs when copying '{}': {}"
                 .format(name, str(msg)))
 
