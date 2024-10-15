@@ -13,7 +13,7 @@
     
     ```
     ../Dataset/peta/images/*.png
-    ./Dataset/peta/PETA.mat
+    ../Dataset/peta/PETA.mat
     ../Dataset/peta/README
     ```
     ```
