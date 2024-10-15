@@ -1,5 +1,4 @@
 # Implement of Deep Multi-attribute Recognition model under ResNet50 backbone network
-# Modified
 
 ## Preparation
 <font face="Times New Roman" size=4>
