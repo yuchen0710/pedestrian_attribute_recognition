@@ -12,9 +12,9 @@
     a. PETA
     
     ```
-    ./dataset/peta/images/*.png
-    ./dataset/peta/PETA.mat
-    ./dataset/peta/README
+    ../Dataset/peta/images/*.png
+    ./Dataset/peta/PETA.mat
+    ../Dataset/peta/README
     ```
     ```
     python script/dataset/transform_peta.py 
@@ -22,8 +22,8 @@
 
     b. RAP
     ```
-    ./dataset/rap/RAP_dataset/*.png
-    ./dataset/rap/RAP_annotation/RAP_annotation.mat
+    ../Dataset/rap/RAP_dataset/*.png
+    ../Dataset/rap/RAP_annotation/RAP_annotation.mat
     ```
     ```
     python script/dataset/transform_rap.py
@@ -31,8 +31,8 @@
 
     c. PA100K
     ```
-    ./dataset/pa100k/data/*.png
-    ./dataset/pa100k/annotation.mat
+    ../Dataset/pa100k/data/*.png
+    ../Dataset/pa100k/annotation.mat
     ``` 
     ```
     python script/dataset/transform_pa100k.py 
@@ -40,12 +40,43 @@
 
     d. RAP(v2)
     ```
-    ./dataset/rap2/RAP_dataset/*.png
-    ./dataset/rap2/RAP_annotation/RAP_annotation.mat
+    ../Dataset/rap2/RAP_dataset/*.png
+    ../Dataset/rap2/RAP_annotation/RAP_annotation.mat
     ```
     ```
     python script/dataset/transform_rap2.py
     ```
+3. File location
+   ```
+    PAR_PATH
+    ├── Dataset
+    │   ├── pa100k
+    │   │   │── data
+    │   │   │── annotation.mat
+    │   │── PETA
+    │   │   │── images
+    │   │   │── PETA.mat
+    │   │── rapv2
+    │   │   │── RAP_annotation
+    │   │   │── RAP_dataset
+    │   │── RAPv1
+    ├── pedestrian_attribute_recognition
+    |   │── script
+    |   │   ├── dataset
+    |   │   │   ├── transform_pa100k.py
+    |   │   │   ├── transform_peta.py
+    |   │   │   ├── transform_rap.py
+    |   │   │   ├── transform_rap2.py
+    |   │   ├── experiment
+    |   │   │   ├── train.sh
+    |   │   │   ├── test.sh
+    |   │   │   ├── train_deepmar_resnet50.py
+    |   │   │   ├── baseline
+    |   │   │   |   ├── ...
+    |   │── exp
+    |   │   ├── deepmar_resnet50
+    ├── ...
+   ```
 </font>
 
 ## Train the model
