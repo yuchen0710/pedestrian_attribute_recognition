@@ -10,12 +10,13 @@
 2. Download and prepare the dataset as follow:
 
     a. PETA
-    
+    - Datset內容
     ```
     ../Dataset/peta/images/*.png
     ../Dataset/peta/PETA.mat
     ../Dataset/peta/README
     ```
+    - 執行底下程式生成 peta_partition.pkl 再做後續 training
     ```
     python script/dataset/transform_peta.py 
     ```
