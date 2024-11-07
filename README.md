@@ -16,7 +16,7 @@
     ../Dataset/peta/PETA.mat
     ../Dataset/peta/README
     ```
-    - 執行底下程式生成 peta_partition.pkl 再做後續 training
+    - 執行底下程式整理 training 需要用到的生成 peta_partition.pkl 再做後續 training
     ```
     python script/dataset/transform_peta.py 
     ```
