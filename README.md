@@ -3,49 +3,81 @@
 ## Preparation
 <font face="Times New Roman" size=4>
 
-**Prerequisite: Python 2.7 and Pytorch 0.3.1**
+**Prerequisite: Python 3.10.13 and Pytorch 2.2.0**
 
 1. Install [Pytorch](https://pytorch.org/)
 
 2. Download and prepare the dataset as follow:
 
-    a. PETA [Baidu Yun](https://pan.baidu.com/s/1q8nsydT7xkDjZJOxvPcoEw), passwd: 5vep, or [Google Drive](https://drive.google.com/open?id=1q4cux17K3zNBgIrDV4FtcHJPLzXNKfYG).
-    
+    a. PETA
+    - Datset內容
     ```
-    ./dataset/peta/images/*.png
-    ./dataset/peta/PETA.mat
-    ./dataset/peta/README
+    ../Dataset/peta/images/*.png
+    ../Dataset/peta/PETA.mat
+    ../Dataset/peta/README
     ```
+    - 執行底下程式整理 training 需要用到的生成 peta_partition.pkl 再做後續 training
     ```
     python script/dataset/transform_peta.py 
     ```
 
-    b. RAP [Google Drive](https://drive.google.com/open?id=1FkXlpbk3R-M_vkvM8ByeAZVAMzN6vUOr).
+    b. RAP
     ```
-    ./dataset/rap/RAP_dataset/*.png
-    ./dataset/rap/RAP_annotation/RAP_annotation.mat
+    ../Dataset/rap/RAP_dataset/*.png
+    ../Dataset/rap/RAP_annotation/RAP_annotation.mat
     ```
     ```
     python script/dataset/transform_rap.py
     ```
 
-    c. PA100K [Links](https://drive.google.com/drive/folders/0B5_Ra3JsEOyOUlhKM0VPZ1ZWR2M)
+    c. PA100K
     ```
-    ./dataset/pa100k/data/*.png
-    ./dataset/pa100k/annotation.mat
+    ../Dataset/pa100k/data/*.png
+    ../Dataset/pa100k/annotation.mat
     ``` 
     ```
     python script/dataset/transform_pa100k.py 
     ```
 
-    d. RAP(v2) [Links](https://drive.google.com/open?id=1hoPIB5NJKf3YGMvLFZnIYG5JDcZTxHph).
+    d. RAP(v2)
     ```
-    ./dataset/rap2/RAP_dataset/*.png
-    ./dataset/rap2/RAP_annotation/RAP_annotation.mat
+    ../Dataset/rap2/RAP_dataset/*.png
+    ../Dataset/rap2/RAP_annotation/RAP_annotation.mat
     ```
     ```
     python script/dataset/transform_rap2.py
     ```
+3. File location
+   ```
+    PAR_PATH
+    ├── Dataset
+    │   ├── pa100k
+    │   │   │── data
+    │   │   │── annotation.mat
+    │   │── PETA
+    │   │   │── images
+    │   │   │── PETA.mat
+    │   │── rapv2
+    │   │   │── RAP_annotation
+    │   │   │── RAP_dataset
+    │   │── RAPv1
+    ├── pedestrian_attribute_recognition
+    |   │── script
+    |   │   ├── dataset
+    |   │   │   ├── transform_pa100k.py
+    |   │   │   ├── transform_peta.py
+    |   │   │   ├── transform_rap.py
+    |   │   │   ├── transform_rap2.py
+    |   │   ├── experiment
+    |   │   │   ├── train.sh
+    |   │   │   ├── test.sh
+    |   │   │   ├── train_deepmar_resnet50.py
+    |   │   │   ├── baseline
+    |   │   │   |   ├── ...
+    |   │── exp
+    |   │   ├── deepmar_resnet50
+    ├── ...
+   ```
 </font>
 
 ## Train the model
@@ -61,15 +93,6 @@
 
    ```
    sh script/experiment/test.sh
-   ```
-
-</font>
-
-## Demo 
-<font face="Times New Roman" size=4>
-
-   ```
-   python script/experiment/demo.py
    ```
 
 </font>
@@ -92,7 +115,7 @@ Please cite this paper in your publications if it helps your research:
 ## Thanks
 <font face="Times New Roman" size=4>
 
-Partial codes are based on the repository from [Houjing Huang](https://github.com/huanghoujing).
+Partial codes are based on the repository from [Dangwei Li](https://github.com/dangweili/pedestrian-attribute-recognition-pytorch).
 
 The code should only be used for academic research.
 
